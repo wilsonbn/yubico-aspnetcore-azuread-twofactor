@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{63F4AB61-8EF2-4BBA-827C-7F7E94E7B380}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7D066FD9-E778-461E-A911-EDDB70524227}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "yubico-aspnetcore-azuread-twofactor", "src\yubico-aspnetcore-azuread-twofactor\yubico-aspnetcore-azuread-twofactor.xproj", "{A244E5D6-FE72-40D5-9AF4-B9DC3A198A4F}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "U2FLib", "src\U2FLib\U2FLib.xproj", "{87131C9F-C44F-4935-A0DF-2FAFA2BA27A2}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "U2FLib.Tests", "src\U2FLib.Tests\U2FLib.Tests.xproj", "{7DA0C526-EA46-4096-8424-DA6047F344EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Development|Any CPU = Development|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A244E5D6-FE72-40D5-9AF4-B9DC3A198A4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A244E5D6-FE72-40D5-9AF4-B9DC3A198A4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A244E5D6-FE72-40D5-9AF4-B9DC3A198A4F}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{A244E5D6-FE72-40D5-9AF4-B9DC3A198A4F}.Development|Any CPU.Build.0 = Development|Any CPU
+		{A244E5D6-FE72-40D5-9AF4-B9DC3A198A4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A244E5D6-FE72-40D5-9AF4-B9DC3A198A4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87131C9F-C44F-4935-A0DF-2FAFA2BA27A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87131C9F-C44F-4935-A0DF-2FAFA2BA27A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87131C9F-C44F-4935-A0DF-2FAFA2BA27A2}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{87131C9F-C44F-4935-A0DF-2FAFA2BA27A2}.Development|Any CPU.Build.0 = Development|Any CPU
+		{87131C9F-C44F-4935-A0DF-2FAFA2BA27A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87131C9F-C44F-4935-A0DF-2FAFA2BA27A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DA0C526-EA46-4096-8424-DA6047F344EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA0C526-EA46-4096-8424-DA6047F344EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA0C526-EA46-4096-8424-DA6047F344EB}.Development|Any CPU.ActiveCfg = Development|Any CPU
+		{7DA0C526-EA46-4096-8424-DA6047F344EB}.Development|Any CPU.Build.0 = Development|Any CPU
+		{7DA0C526-EA46-4096-8424-DA6047F344EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA0C526-EA46-4096-8424-DA6047F344EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A244E5D6-FE72-40D5-9AF4-B9DC3A198A4F} = {63F4AB61-8EF2-4BBA-827C-7F7E94E7B380}
+		{87131C9F-C44F-4935-A0DF-2FAFA2BA27A2} = {63F4AB61-8EF2-4BBA-827C-7F7E94E7B380}
+		{7DA0C526-EA46-4096-8424-DA6047F344EB} = {63F4AB61-8EF2-4BBA-827C-7F7E94E7B380}
+	EndGlobalSection
+EndGlobal

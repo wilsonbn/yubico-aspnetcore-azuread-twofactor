@@ -1,0 +1,29 @@
+﻿@using System.ComponentModel.DataAnnotations
+@using System.Text.Encodings.Web
+@using Microsoft.AspNetCore.Server.Kestrel.Internal.Http
+@{
+    ViewData["Title"] = "Access Denied";
+}
+
+<h1 class="text-danger">
+    <span class="rcorners2">
+        Access Denied
+    </span>
+</h1>
+
+<h2 class="text-danger">
+    <span>You do not have access to your request.</span>@if (!ViewBag.DisplayRetryLink)
+    {
+        <span>Max attempts have been made.</span>
+    }
+</h2>
+
+
+
+<h3>@System.Net.WebUtility.HtmlDecode(@ViewBag.Message)</h3>
+@if (ViewBag.DisplayRetryLink)
+{
+    <a href="@ViewBag.RetryLink">(@ViewBag.YubicoClientAttempts of 3) Retrys</a>
+}
+
+

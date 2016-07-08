@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "YubiKey OTP Signon";
+}
+<h2>@ViewData["Title"].</h2>
+<p class="text-success">Click in the YubiKey field, and touch the YubiKey button.</p>
+@*<input type="password" class="form-control" id="ykpwd"/>*@
+<div class="inner-addon left-addon">
+    <form id="YubiKeyForm">
+        <img class="glyphicon" src="https://demo.yubico.com/favicon.ico">
+        <input class="form-control" autocomplete="off" type="password" id="ykpwd" name="ykpwd" placeholder="YubiKey" autofocus="autofocus">
+    </form>
+</div>
+@section scripts{
+    <script>
+
+        $("input#ykpwd").keypress(function (event) {
+            if (event.which === 13) {
+                event.preventDefault();
+                $.ajax({
+                  type: "POST",
+                  url: "/Account/TwoFactorSignIn",
+                  data: JSON.stringify({otp: $("#ykpwd").val()}),
+                  contentType: "application/json; charset=utf-8",
+                  dataType: "json",
+                  success: function(msg) {
+                    // Replace the div's content with the page method's return.
+                      //$("#Result").text(msg.d);
+                      if (msg.status) {
+                          var url = '/';
+                          window.location.href = url;
+                      }
+                      else {
+                          var url = '/Account/AccessDenied?message=' + encodeURI('An invalid YubiKey OTP was provided.');
+                          window.location.href = url;
+                      }
+                  }
+                });
+            }
+        });
+
+        //$("input#ykpwd").keypress(function (event) {
+        //    if (event.which === 13) {
+        //        $("#YubiKeyForm").attr("method", "post");
+        //        $("#YubiKeyForm").submit();
+        //    }
+        //});
+    </script>
+}

@@ -1,0 +1,7 @@
+﻿{
+  "YubiKey": {
+    "clientId": "[Enter client ID as obtained from YubiKey Portal, e.g. 12345]",
+    "apiKey": "[Enter api ID as obtained from YubiKey Portal, e.g. XxXXXXX0x0xxxxxX0XXXX0X0XXX=]",
+    "YubiKeyIdentity": "[Enter YubiKey Identity as obtained from YubiKey Portal, e.g. cccjgjgkhcbb]"
+  }
+}
